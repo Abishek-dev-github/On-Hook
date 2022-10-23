@@ -17,109 +17,102 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="manifest" href="__manifest.json">
 	<style>
-	.screen-reader-text {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
 
-@font-face {
-  font-family: 'fontello';
-  src: url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.eot');
-  src: url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.eot?#iefix') format('embedded-opentype'),
-       url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.woff') format('woff'),
-       url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.ttf') format('truetype'),
-       url('https://css-tricks.com/examples/RoundButtons/fonts/fontello.svg#fontello') format('svg');
-  font-weight: normal; font-style: normal;
-}
+*,:after,:before{box-sizing:border-box}
+.pull-left{float:left}
+.pull-right{float:right}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
 
-[class*="icon-"] {
-  font-family: 'fontello';
-  font-style: normal;
-  font-size: 3em;
-  speak: none;
+.clock:before,
+.count:after{
+	content:'';
+	position:absolute;
 }
-
-.icon-home:after     { content: "\2302"; } 
-.icon-cog:after      { content: "\2699"; } 
-.icon-cw:after       { content: "\27f3"; } 
-.icon-location:after { content: "\e724"; } 
-
-* { 
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing:    border-box; 
-  box-sizing:         border-box; 
-  margin: 0;
-  padding: 0;
+.clock-wrap{
+	margin:auto;
+	width:240px;
+	height:240px;
+	margin-top:0px;
+	position:relative;
+	border-radius:50px;
+	background-color:#fff;
+	box-shadow:0 0 15px rgba(0,0,0,.15);
 }
-.nav1 {
-  list-style: none;
-  text-align: center;
+.clock{
+	margin-top:0px;
+	top:50%;
+	left:50%;
+	width:180px;
+	height:180px;
+	border-radius:50%;
+	position:absolute;
+	margin-top:-90px;
+	margin-left:-90px;
+	background-color:#feeff4;
 }
-
-.nav1 li {
-  position: relative;
-  display: inline-block;
-  margin-right: -4px;
+.clock:before{
+	top:50%;
+	left:50%;
+	width:120px;
+	height:120px;
+	margin-top:-60px;
+	margin-left:-60px;
+	border-radius:inherit;
+	background-color:#ec366b;
+	box-shadow:0 0 15px rgba(0,0,0,.15), 0 0 3px rgba(255,255,255,.75) inset;
+	/*border:1px solid rgba(255,255,255,.1);*/
 }
-
-.nav1 li:before {
-  content: "";
-  display: block;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #fff;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  z-index: -1;
+.count{
+	width:100%;
+	color:#fff;
+	height:100%;
+	padding:50px;
+	font-size:32px;
+	font-weight:500;
+	line-height:50px;
+	position:absolute;
+	text-align:center;
 }
-
-.nav1 a:link, .nav1 a:visited {
-  display: block;
-  text-decoration: none;
-  background-color: #f7f7f7;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
-  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
-  color: #a7a7a7;
-  margin: 36px;
-  width: 144px;
-  height: 144px;
-  position: relative;
-  text-align: center;
-  line-height: 144px;
-  border-radius: 50%;
-  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
-  border: solid 1px transparent;
+.count:after{
+	width:100%;
+	display:block;
+	font-size:18px;
+	font-weight:300;
+	line-height:18px;
+	text-align:center;
+	position:relative;
 }
-
-.nav1 a:before {
-  content: "";
-  display: block;
-  background: #fff;
-  border-top: 2px solid #ddd;
-  position: absolute;
-  top: -18px;
-  left: -18px;
-  bottom: -18px;
-  right: -18px;
-  z-index: -1;
-  border-radius: 50%;
-  box-shadow: inset 0px 8px 48px #ddd;
+.count.sec:after{content:'sec'}
+.count.min:after{content:'min'}
+.action{
+	margin:auto;
+	max-width:200px;
 }
-
-.nav1 a:active {
-  box-shadow: 0px 3px 4px #aaa inset, 0px 2px 3px #fff;
+.action .input{
+	margin-top:30px;
+	position:relative;
 }
-
-.nav1 a:hover {
-  text-decoration: none;
-  color: #555;
-  background: #f5f5f5;
-}​
+.action .input-num{
+	width:100%;
+	border:none;
+	padding:12px;
+	border-radius:60px;
+}
+.action .input-btn{
+	top:0;
+	right:0;
+	color:#fff;
+	border:none;
+	border:none;
+	padding:12px;
+	position:absolute;
+	border-radius:60px;
+	background-color:#ec366b;
+	text-transform:uppercase;
+}
+.tbl{display:table;width:100%}
+.tbl .col{display:table-cell}
  
 
 	</style>
@@ -161,17 +154,16 @@
         <!-- Wallet -->
         <div class="section full gradientSection">
 		
-            <div class="in">
-				<nav class="nav1">
-					<ul class="nav1">
-						<li>
-						  <a href="#">
-            <span class="icon-home"></span>
-            <span class="screen-reader-text">Home</span>
-          </a>
-						</li>
-					</ul>
-				</nav>
+            <div class="clock-wrap">
+				<div class="clock pro-0">
+					<span class="count">0</span>
+				</div>
+			</div>
+			<div class="action">
+				<div class="input">
+					<input class="input-num" type="number" min="1" placeholder="Enter Minute"><input data-action="start" class="input-btn" type="button" value="Start">
+				</div>
+			</div>
                 <h5 class="title mb-2">Current Balance</h5>
                 <h1 class="total">$ 2,562.50</h1>
                 <h4 class="caption">
@@ -792,7 +784,84 @@
         })
 
     </script>
+	<script>
+	$step = 1;
+$loops = Math.round(100 / $step);
+$increment = 360 / $loops;
+$half = Math.round($loops / 2);
+$barColor = '#ec366b';
+$backColor = '#feeff4';
 
+$(function(){
+	clock.init();
+});
+clock={
+	interval:null,
+	init:function(){
+		$('.input-btn').click(function(){
+			switch($(this).data('action')){
+				case'start':
+					clock.stop();
+					clock.start($('.input-num').val());
+				break;
+				case'stop':
+					clock.stop();
+				break;
+			}
+		});
+	},
+	start:function(t){
+		var pie = 0;
+		var num = 0;
+		var min = t?t:1;
+		var sec = min*60;
+		var lop = sec;
+		$('.count').text(min);
+		if(min>0){
+			$('.count').addClass('min')
+		}else{
+			$('.count').addClass('sec')
+		}
+		clock.interval = setInterval(function(){
+			sec = sec-1;
+			if(min>1){
+				pie = pie+(100/(lop/min));
+			}else{
+				pie = pie+(100/(lop));
+			}
+			if(pie>=101){ pie = 1; }
+			num = (sec/60).toFixed(2).slice(0,-3);
+			if(num==0){
+				$('.count').removeClass('min').addClass('sec').text(sec);
+			}else{
+				$('.count').removeClass('sec').addClass('min').text(num);
+			}
+			//$('.clock').attr('class','clock pro-'+pie.toFixed(2).slice(0,-3));
+			//console.log(pie+'__'+sec);
+			$i = (pie.toFixed(2).slice(0,-3))-1;
+			if($i < $half){
+				$nextdeg = (90 + ( $increment * $i ))+'deg';
+				$('.clock').css({'background-image':'linear-gradient(90deg,'+$backColor+' 50%,transparent 50%,transparent),linear-gradient('+$nextdeg+','+$barColor+' 50%,'+$backColor+' 50%,'+$backColor+')'});
+			}else{
+				$nextdeg = (-90 + ( $increment * ( $i - $half ) ))+'deg';
+				$('.clock').css({'background-image':'linear-gradient('+$nextdeg+','+$barColor+' 50%,transparent 50%,transparent),linear-gradient(270deg,'+$barColor+' 50%,'+$backColor+' 50%,'+$backColor+')'});
+			}
+			if(sec==0){
+				clearInterval(clock.interval);
+				$('.count').text(0);
+				//$('.clock').removeAttr('class','clock pro-100');
+				$('.clock').removeAttr('style');
+			}
+		},1000);
+	},
+	stop:function(){
+		clearInterval(clock.interval);
+		$('.count').text(0);
+		$('.clock').removeAttr('style');
+	}
+}
+	</script>
+	
 </body>
 
 </html>
