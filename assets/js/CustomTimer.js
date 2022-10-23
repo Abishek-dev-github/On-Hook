@@ -26,7 +26,7 @@ clock={
 	start:function(t){
 		var pie = 0;
 		var num = 0;
-		var min = t?t:1;
+		var min = t?t:180;
 		var sec = min*60;
 		var lop = sec;
 		$('.count').text(min);
