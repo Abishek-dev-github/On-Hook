@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="manifest" href="__manifest.json">
-	
+	<style>marquee { background: #0089fa; color: black; }</style>
 </head>
 
 <body>
@@ -63,17 +63,34 @@
                         <span class="title">Total Balance</span>
                         <h1 class="total">$ 2,562.50</h1>
                     </div>
-                    <div class="right">
+                    <!--<div class="right">
                         <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#depositActionSheet">
                             <ion-icon name="add-outline"></ion-icon>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
+				<ul class="listview image-listview inset">
+					<li>
+						<a href="app-transactions.html" class="item">
+							<marquee class="li" direction=”right” onmouseover="stop()" onmouseout="start()">
+								★ About Platform &lt;Start Time&gt; Change
+								★ About USDT's new &lt;TRC20&gt; Channel
+								★ Open a &lt;Crypto Currency&gt; Channel
+								★ About USDT's new &lt;TRC20&gt; Channel
+								★ About Platform &lt;Start Time&gt; Change
+								★ About USDT's new &lt;TRC20&gt; Channel
+								★ Open a &lt;Crypto Currency&gt; Channel
+								★ About USDT's new &lt;TRC20&gt; Channel
+							</marquee>
+						</a>
+					</li>
+				</ul>
+				
                 <!-- * Balance -->
                 <!-- Wallet Footer -->
                 <div class="wallet-footer">
-					<div class="item">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exchangeActionSheet">
+                    <div class="item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#withdrawActionSheet">
                             <div class="icon-wrapper bg-warning">
                                 <ion-icon name="wallet-outline"></ion-icon>
                             </div>
@@ -81,7 +98,7 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#withdrawActionSheet">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheet">
                             <div class="icon-wrapper bg-danger">
                                 <ion-icon name="arrow-down-outline"></ion-icon>
                             </div>
@@ -89,7 +106,7 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheet">
+                        <a href="app-platform-transfer.html">
                             <div class="icon-wrapper">
                                 <ion-icon name="arrow-forward-outline"></ion-icon>
                             </div>
@@ -97,13 +114,14 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a href="app-cards.html">
+                        <a href="app-contact.html"">
                             <div class="icon-wrapper bg-success">
-                                <ion-icon name="card-outline"></ion-icon>
+                                <ion-icon name="call-outline"></ion-icon>
                             </div>
-                            <strong>Cards</strong>
+                            <strong>Contact Us</strong>
                         </a>
                     </div>
+
                 </div>
                 <!-- * Wallet Footer -->
             </div>
@@ -161,37 +179,64 @@
                         <h5 class="modal-title">Withdraw Money</h5>
                     </div>
                     <div class="modal-body">
-                        <div class="modal-body">
-                        <div class="listview-title mt-1">Fund Handling</div>
-        <ul class="listview image-listview inset mb-2">
-            <li>
-                <a href="app-withdraw-to-wallet.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="logo-usd"></ion-icon>
+                        	<ul class="listview image-listview inset mb-2">
+								<li>
+									<a href="app-usdt-recharge.html" class="item">
+										<div class="icon-box bg-primary">
+											<ion-icon name="logo-usd"></ion-icon>
+										</div>
+										<div class="in">
+											USDT Recharge
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="app-transactions.html" class="item" data-bs-toggle="modal" data-bs-target="#DialogIconedDanger">
+										<div class="icon-box bg-primary">
+											<ion-icon name="finger-print"></ion-icon>
+										</div>
+										<div class="in">
+											Bank Recharge
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="app-transactions.html" class="item" data-bs-toggle="modal" data-bs-target="#DialogIconedDanger">
+										<div class="icon-box bg-primary">
+											<ion-icon name="wallet"></ion-icon>
+										</div>
+										<div class="in">
+											Online Recharge
+										</div>
+									</a>
+								</li>
+							</ul>		
                     </div>
-                    <div class="in">
-                        Withdraw to Wallet (USDT)
+                </div>
+            </div>
+        </div>
+		<!-- DialogIconedDanger -->
+        <div class="modal fade dialogbox" id="DialogIconedDanger" data-bs-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-icon text-danger">
+                        <ion-icon name="close-circle"></ion-icon>
                     </div>
-                </a>
-            </li>
-			<li>
-                <a href="app-withdraw-to-account.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="finger-print"></ion-icon>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Error</h5>
                     </div>
-                    <div class="in">
-                        Withdraw to Bank Account
+                    <div class="modal-body">
+                        This feature is currently not enabled.
                     </div>
-                </a>
-            </li>
-        </ul>
-                    </div>
-                            
+                    <div class="modal-footer">
+                        <div class="btn-inline">
+                            <a href="#" class="btn" data-bs-dismiss="modal">CLOSE</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- * DialogIconedDanger -->
         <!-- * Withdraw Action Sheet -->
 
         <!-- Send Action Sheet -->
@@ -199,48 +244,31 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Send Money</h5>
+                        <h5 class="modal-title">Withdraw</h5>
                     </div>
                     <div class="modal-body">
-                        <div class="action-sheet-content">
-                            <form>
-                                <div class="form-group basic">
-                                    <div class="input-wrapper">
-                                        <label class="label" for="account2">From</label>
-                                        <select class="form-control custom-select" id="account2">
-                                            <option value="0">Savings (*** 5019)</option>
-                                            <option value="1">Investment (*** 6212)</option>
-                                            <option value="2">Mortgage (*** 5021)</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <div class="input-wrapper">
-                                        <label class="label" for="text11">To</label>
-                                        <input type="email" class="form-control" id="text11"
-                                            placeholder="Enter bank ID">
-                                        <i class="clear-input">
-                                            <ion-icon name="close-circle"></ion-icon>
-                                        </i>
-                                    </div>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <label class="label">Enter Amount</label>
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text" id="basic-addon1">$</span>
-                                        <input type="text" class="form-control" placeholder="Enter an amount"
-                                            value="100">
-                                    </div>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <button type="button" class="btn btn-primary btn-block btn-lg"
-                                        data-bs-dismiss="modal">Send</button>
-                                </div>
-                            </form>
-                        </div>
+                        <ul class="listview image-listview inset mb-2">
+									<li>
+										<a href="app-withdraw-to-wallet.html" class="item">
+											<div class="icon-box bg-primary">
+												<ion-icon name="logo-usd"></ion-icon>
+											</div>
+											<div class="in">
+												Withdraw to Wallet (USDT)
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="app-withdraw-to-account.html" class="item" data-bs-toggle="modal" data-bs-target="#DialogIconedDanger">
+											<div class="icon-box bg-primary">
+												<ion-icon name="finger-print"></ion-icon>
+											</div>
+											<div class="in">
+												Withdraw to Bank Account
+											</div>
+										</a>
+									</li>
+							</ul>
                     </div>
                 </div>
             </div>
@@ -252,42 +280,57 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Recharge Wallet</h5>
+                        <h5 class="modal-title">Exchange Money</h5>
                     </div>
                     <div class="modal-body">
-                        <div class="listview-title mt-1">Fund Handling</div>
-        <ul class="listview image-listview inset mb-2">
-            <li>
-                <a href="app-usdt-recharge.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="logo-usd"></ion-icon>
-                    </div>
-                    <div class="in">
-                        USDT Recharge
-                    </div>
-                </a>
-            </li>
-			<li>
-                <a href="app-transactions.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="finger-print"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Bank Recharge
-                    </div>
-                </a>
-            </li>
-			<li>
-                <a href="app-transactions.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="wallet"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Online Recharge
-                    </div>
-                </a>
-            </li>
-        </ul>
+                        <div class="action-sheet-content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group basic">
+                                            <div class="input-wrapper">
+                                                <label class="label" for="currency1">From</label>
+                                                <select class="form-control custom-select" id="currency1">
+                                                    <option value="1">EUR</option>
+                                                    <option value="2">USD</option>
+                                                    <option value="3">AUD</option>
+                                                    <option value="4">CAD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group basic">
+                                            <div class="input-wrapper">
+                                                <label class="label" for="currency2">To</label>
+                                                <select class="form-control custom-select" id="currency2">
+                                                    <option value="1">USD</option>
+                                                    <option value="1">EUR</option>
+                                                    <option value="2">AUD</option>
+                                                    <option value="3">CAD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group basic">
+                                    <label class="label">Enter Amount</label>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="basic-addon2">$</span>
+                                        <input type="text" class="form-control" placeholder="Enter an amount"
+                                            value="100">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group basic">
+                                    <button type="button" class="btn btn-primary btn-block btn-lg"
+                                        data-bs-dismiss="modal">Exchange</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -296,37 +339,36 @@
 
         <!-- Stats -->
         <div class="section">
-            <div class="row mt-12">
+            <div class="row mt-2">
                 <div class="col-6">
                     <div class="stat-box">
-                        <div class="title">Profits</div>
+                        <div class="title">Income</div>
                         <div class="value text-success">$ 552.95</div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="stat-box">
-                        <div class="title">Commision</div>
-                        <div class="value text-warning">$ 86.45</div>
-                    </div>
-                </div>
-				<br>
-				<!--<div class="col-6">
-                    <div class="stat-box">
-                        <strong>Withdraw</strong>
+                        <div class="title">Expenses</div>
                         <div class="value text-danger">$ 86.45</div>
                     </div>
                 </div>
-				<div class="col-6">
-                    <div class="stat-box">
-                        <div class="title">Refund</div>
-                        <div class="value text-warning">$ 54.45</div>
-                    </div>
-                </div>-->
             </div>
-            
+            <!--<div class="row mt-2">
+                <div class="col-6">
+                    <div class="stat-box">
+                        <div class="title">Total Bills</div>
+                        <div class="value">$ 53.25</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="stat-box">
+                        <div class="title">Savings</div>
+                        <div class="value">$ 120.99</div>
+                    </div>
+                </div>
+            </div>-->
         </div>
         <!-- * Stats -->
-		
 
         <!-- Monthly Bills -->
         <div class="section full mt-4">
@@ -402,65 +444,63 @@
         <!-- * Monthly Bills -->
 
         <!-- News -->
+		<!-- News -->
         <div class="section full mt-4 mb-3">
             <div class="section-heading padding">
                 <h2 class="title">Lastest News</h2>
                 <a href="app-blog.html" class="link">View All</a>
             </div>
+				<div class="section full mb-3">
+				<!--<div class="section-title">Single Carousel</div>-->
 
-            <!-- carousel multiple -->
-            <div class="carousel-multiple splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
+				<!-- carousel single -->
+				<div class="carousel-single splide">
+					<div class="splide__track">
+						<ul class="splide__list">
 
-                        <li class="splide__slide">
-                            <a href="app-blog-post.html">
-                                <div class="blog-card">
-                                    <img src="assets/img/sample/photo/1.jpg" alt="image" class="imaged w-100">
-                                    <div class="text">
-                                        <h4 class="title">What will be the value of bitcoin in the next...</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+							<li class="splide__slide">
+								<div class="card">
+									<img src="assets/img/sample/photo/wide2.jpg" class="card-img-top" alt="image">
+									<div class="card-body">
+										<h5 class="card-title">Carousel Item</h5>
+										<p class="card-text">
+											Some quick example text to build on the card title and make up the bulk
+											of the card's content.
+										</p>
+									</div>
+								</div>
+							</li>
 
-                        <li class="splide__slide">
-                            <a href="app-blog-post.html">
-                                <div class="blog-card">
-                                    <img src="assets/img/sample/photo/2.jpg" alt="image" class="imaged w-100">
-                                    <div class="text">
-                                        <h4 class="title">Rules you need to know in business</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+							<li class="splide__slide">
+								<div class="card">
+									<img src="assets/img/sample/photo/wide3.jpg" class="card-img-top" alt="image">
+									<div class="card-body">
+										<h5 class="card-title">Item Title</h5>
+										<p class="card-text">
+											Some quick example text to build on the card title and make up the bulk
+											of the card's content.
+										</p>
+									</div>
+								</div>
+							</li>
 
-                        <li class="splide__slide">
-                            <a href="app-blog-post.html">
-                                <div class="blog-card">
-                                    <img src="assets/img/sample/photo/3.jpg" alt="image" class="imaged w-100">
-                                    <div class="text">
-                                        <h4 class="title">10 easy ways to save your money</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+							<li class="splide__slide">
+								<div class="card">
+									<img src="assets/img/sample/photo/wide4.jpg" class="card-img-top" alt="image">
+									<div class="card-body">
+										<h5 class="card-title">Another Item Title</h5>
+										<p class="card-text">
+											Some quick example text to build on the card title and make up the bulk
+											of the card's content.
+										</p>
+									</div>
+								</div>
+							</li>
 
-                        <li class="splide__slide">
-                            <a href="app-blog-post.html">
-                                <div class="blog-card">
-                                    <img src="assets/img/sample/photo/4.jpg" alt="image" class="imaged w-100">
-                                    <div class="text">
-                                        <h4 class="title">Follow the financial agenda with...</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <!-- * carousel multiple -->
+						</ul>
+					</div>
+				</div>
+            <!-- * carousel single -->
 
         </div>
         <!-- * News -->
@@ -584,42 +624,53 @@
                     </div>
                     <!-- * action group -->
 
-                    <!-- App Bottom Menu -->
-    <div class="appBottomMenu">
-        <a href="index.html" class="item active">
-            <div class="col">
-                <ion-icon name="pie-chart-outline"></ion-icon>
-                <strong>Overview</strong>
-            </div>
-        </a>
-        <a href="app-pages.html" class="item">
-            <div class="col">
-                <ion-icon name="document-text-outline"></ion-icon>
-                <strong>Pages</strong>
-            </div>
-        </a>
-        <a href="app-components.html" class="item">
-            <div class="col">
-                <ion-icon name="apps-outline"></ion-icon>
-                <strong>Components</strong>
-            </div>
-        </a>
-        <a href="app-cards.html" class="item">
-            <div class="col">
-                <ion-icon name="card-outline"></ion-icon>
-                <strong>My Cards</strong>
-            </div>
-        </a>
-        <a href="app-settings.html" class="item">
-            <div class="col">
-                <ion-icon name="settings-outline"></ion-icon>
-                <strong>Settings</strong>
-            </div>
-        </a>
-    </div>
-    <!-- * App Bottom Menu -->
-            
-					<!-- * App Bottom Menu -->
+                    <!-- menu -->
+                    <div class="listview-title mt-1">Menu</div>
+                    <ul class="listview flush transparent no-line image-listview">
+                        <li>
+                            <a href="index.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="pie-chart-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    Overview
+                                    <span class="badge badge-primary">10</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-pages.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="document-text-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    Pages
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-components.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="apps-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    Components
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="app-cards.html" class="item">
+                                <div class="icon-box bg-primary">
+                                    <ion-icon name="card-outline"></ion-icon>
+                                </div>
+                                <div class="in">
+                                    My Cards
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- * menu -->
+
                     <!-- others -->
                     <div class="listview-title mt-1">Others</div>
                     <ul class="listview flush transparent no-line image-listview">
