@@ -4,6 +4,14 @@
 @import url("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap");
 body {
+  background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
+    background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+    background: linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  /*min-height: calc(100vh - 2rem);*/
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.6rem;
@@ -17,6 +25,100 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::before, 
+body::after {
+  content: "";
+  width: 70vmax;
+  height: 70vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.07);
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  z-index: 1;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none; 
+}
+  
+body::after {
+    width: 70vmin;
+    height: 70vmin;
+    left: auto;
+    right: -10vmin;
+    top: auto;
+    bottom: 0;
+    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+    transform-origin: 20% 20%; 
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+  100% {
+    border-radius: 40% 60%; } 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn); 
+  } 
+}
+  .st0{display:none;}
+  .st1{display:inline;}
+  .st2{opacity:0.29;}
+  .st3{fill:#FFFFFF;}
+  .st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+  .st5{clip-path:url(#SVGID_4_);}
+  .st6{clip-path:url(#SVGID_6_);}
+  .st7{clip-path:url(#SVGID_8_);}
+  .st8{clip-path:url(#SVGID_10_);}
+  .st9{fill:none;}
+  .st10{clip-path:url(#SVGID_12_);}
+  .st11{opacity:0.7;}
+  .st12{clip-path:url(#SVGID_14_);}
+  .st13{opacity:0.2;}
+  .st14{clip-path:url(#SVGID_16_);}
+  .st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+
+
+Resources1× 0.5× 0.25×Rerun
 a {
   color: #6236FF;
   outline: 0 !important;
@@ -269,7 +371,7 @@ a:hover, a:active, a:focus {
   align-items: center;
   justify-content: center;
   border-radius: 200px;
-  background: #6236FF;
+  background: #038F6A;
 }
 
 .appBottomMenu .item .action-button.large {
@@ -469,7 +571,7 @@ a:hover, a:active, a:focus {
 
 .sidebar-balance {
   padding: 6px 16px;
-  background: #6236FF;
+  background: #038F6A;
 }
 
 .sidebar-balance .listview-title {
@@ -493,7 +595,7 @@ a:hover, a:active, a:focus {
   align-items: flex-start;
   justify-content: space-between;
   padding: 0px 16px 10px 16px;
-  background: #6236FF;
+  background: #038F6A;
 }
 
 .action-group .action-button {
@@ -1159,12 +1261,13 @@ blockquote.blockquote .blockquote-footer {
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background: #6236FF;
+  background: #038F6A;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
 }
+
 
 #loader .loading-icon {
   width: 42px;
@@ -1781,8 +1884,8 @@ a.badge-dark {
 }
 
 .btn-primary {
-  background: #6236FF !important;
-  border-color: #6236FF !important;
+  background: #038F6A !important;
+  border-color: #038F6A !important;
   color: #FFFFFF !important;
 }
 
@@ -2994,7 +3097,7 @@ a.badge-dark {
 }
 
 .bg-primary {
-  background: #6236FF !important;
+  background: #038F6A !important;
   color: #FFF;
 }
 
@@ -5143,7 +5246,7 @@ textarea,
   content: "";
   display: block;
   height: 140px;
-  background: #6236FF;
+  background: linear-gradient(90deg, #047f4d 25%, #2ee50c 136%)
 }
 
 .wallet-card {
@@ -5343,7 +5446,7 @@ textarea,
 .bill-box .img-wrapper .iconbox {
   width: 48px;
   height: 48px;
-  background: #6236FF;
+  background: #038F6A;
   border-radius: 10px;
   line-height: 1em;
   color: #fff;
@@ -5683,8 +5786,7 @@ textarea,
 .gradientSection {
   position: relative;
   text-align: center;
-  background: #6236FF;
-  background-image: linear-gradient(-208deg, #6236FF 38%, #8a69ff 100%);
+background: linear-gradient(90deg, #047f4d 25%, #2ee50c 136%)
 }
 
 .gradientSection .in {
