@@ -5246,7 +5246,7 @@ textarea,
   content: "";
   display: block;
   height: 140px;
-  background: linear-gradient(90deg, #047f4d 25%, #2ee50c 136%)
+  background: #038F6A;
 }
 
 .wallet-card {
